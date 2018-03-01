@@ -1,0 +1,9 @@
+
+<%= form_for (@email), remote: true do |f|   %>
+  <%= f.label :"Objet du mail :" %>
+  <%= f.text_field :object   %>
+
+  <%= f.label :"Votre message :" %>
+  <%= f.text_field :body     %>
+  <%= f.button :Envoyer   %>
+<% end %>

@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+#
+
+Email.create ([ {object:"Bonjour", body:"Comment ca va ?"}])
+Email.create ([ {object:"Mail urgent", body:"Non non, en fait rien d'urgent"}])
+Email.create ([ {object:"Vous avez gagné", body:"Vous venez de gagner un enorme lot. Pour le récuperer, envoyez nous 500€ à l'adresse suivante: arnaque@scameasy.com"} ])

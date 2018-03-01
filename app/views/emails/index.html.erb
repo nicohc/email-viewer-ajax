@@ -1,2 +1,47 @@
-<h1>Emails</h1>
+<div class="barre_top">
+  <h1>Emails</h1>
+  <!-- Pour ajouter un nouveau mail -->
+  <div class="bouton-newmail">
+    <%= link_to new_email_path, remote: true do %>
+    <button class="btn btn-default">Nouveau mail</button>
+    <% end %>
+  </div>
+</div>
+
+<!-- Lieu ou apprait le formulaire pour un nouveau mail -->
+<div class="formulaire-mail">
+  <div id="email-form" style="display:none;"></div>
+</div>
+
 <p>Voici vos emails : </p>
+<br>
+<div class="mailreader">
+    <table class="mailscrapper">
+      <tr>
+        <th>ID du mail</th>
+        <th>Object du mail</th>
+        <th>Supprimer</th>
+      </tr>
+      <br>
+      <% @emails.each do |email| %>
+      <tr >
+          <td><%= email.id %></td>
+          <td><%= link_to email.object, email_path(email), remote: true %> </td>
+          <td><%= link_to 'effacer', email, method: :delete,data: {confirm: "Etes vous sûr?"},
+                  :remote => true, :class => 'delete_email' %>
+      </tr>
+      <% end %>
+    </table>
+    <div class="visualisateur">
+      <table>
+        <th>
+          <tr>Contenu de l'email</tr>
+        </th>
+        <td>
+          <div id="email-display" style="display:none;"></div>
+        </td>
+      </table>
+    </div>
+</div>
+<br><br>
+<%= link_to 'Ajouter un mail à la liste', new_email_path, remote: true %>
