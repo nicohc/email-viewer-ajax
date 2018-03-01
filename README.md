@@ -1,25 +1,10 @@
-# README
+# README email-viewer-ajax
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Visualisation des emails avec AJAX
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Gestion de la suppression de mail avec AJAX
 
 * ...
-# email-viewer-ajax
+
+
+Un projet à voir pendant une durée limitée ici : https://emailswithajax.herokuapp.com/ 
