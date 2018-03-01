@@ -46,7 +46,6 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 .visualisateur {
   border-left: grey 1px solid;
-  padding-left: 5px;
 }
 
 .bouton-newmail {
@@ -58,6 +57,13 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   font-size: 18px;
 }
 
+#email-display{
+  border-top: 1px grey solid;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
 
 /* forms */
 

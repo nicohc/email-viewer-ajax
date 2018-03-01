@@ -7,10 +7,12 @@ class EmailsController < ApplicationController
     @unread_emails = Email.where(read: false)
     @read_emails = Email.where(read: true)
   end
-  def show
-  end
+
   def new
     @email = Email.new
+  end
+
+  def show
   end
 
   def create
