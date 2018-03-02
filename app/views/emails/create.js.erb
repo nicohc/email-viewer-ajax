@@ -1,3 +1,2 @@
-
-$('#emails').html("<%= j (render @email) %>");
+$('.mailscrapper tr:last-child').html("<td><%=@email.id %></td><td><%=@email.object%></td><td>Tout frais !</td><td>Non disponible</td>");
 $('#email-form').slideUp(350);

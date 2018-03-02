@@ -20,16 +20,23 @@
       <tr>
         <th>ID du mail</th>
         <th>Object du mail</th>
+        <th>Etat</th>
         <th>Supprimer</th>
       </tr>
       <br>
       <% @emails.each do |email| %>
-      <tr >
+      <tr id="id<%= email.id %>" >
           <td><%= email.id %></td>
           <td><%= link_to email.object, email_path(email), remote: true %> </td>
-          <td><%= link_to 'effacer', email, method: :delete,data: {confirm: "Etes vous sûr?"},
+          <td class="status"><% if email.read === false
+            %>Non lu
+            <%end%>
+          </td>
+          <td><%= link_to 'effacer', email, method: :delete, data: {confirm: "Etes vous sûr?"},
                   :remote => true, :class => 'delete_email' %>
       </tr>
+      <!-- Tr supplémantaire pour les ajouts de nouveaux mails -->
+      <tr></tr>
       <% end %>
     </table>
     <div class="visualisateur">

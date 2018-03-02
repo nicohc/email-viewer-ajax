@@ -8,6 +8,8 @@
 #
 #
 
-Email.create ([ {object:"Bonjour", body:"Comment ca va ?"}])
+Email.create ([ {object:"Bonjour", body:"Comment ca va ?", read:true}])
+Email.create ([ {object:"Résultats examens", body:"Récalé !", read:true}])
 Email.create ([ {object:"Mail urgent", body:"Non non, en fait rien d'urgent"}])
 Email.create ([ {object:"Vous avez gagné", body:"Vous venez de gagner un enorme lot. Pour le récuperer, envoyez nous 500€ à l'adresse suivante: arnaque@scameasy.com"} ])
+Email.create ([ {object:"Révélations", body:"Il y a 26 lettres dans l'alphabet. Incroyable, non ?"} ])

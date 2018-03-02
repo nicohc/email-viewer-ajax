@@ -1,6 +1,6 @@
 class EmailsController < ApplicationController
-  before_action :all_emails, only: [:index, :create, :show, :destroy]
-  before_action :set_emails, only: [:show, :destroy]
+  before_action :all_emails, only: [:index, :create, :show,:update, :destroy]
+  before_action :set_emails, only: [:show, :update, :destroy]
   respond_to :html, :js
 
   def index
@@ -13,15 +13,22 @@ class EmailsController < ApplicationController
   end
 
   def show
+    @email.read = true
+    @email.save
   end
 
   def create
     @email  = Email.create(email_params)
   end
 
+  def update
+    @email.update_attributes(email_params)
+  end
+
   def destroy
    @email.destroy
    flash[:notice] = 'Mail supprimé'
+  
   end
 
 
@@ -35,7 +42,7 @@ class EmailsController < ApplicationController
   end
 
   def email_params
-     params.require(:email).permit(:object, :body)
+     params.require(:email).permit(:object, :body, :read)
   end
 
 end

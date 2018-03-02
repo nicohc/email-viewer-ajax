@@ -26,8 +26,8 @@ table {
 th, td {
     border-bottom: 1px solid #ddd;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
-
+/*tr:nth-child(even) {background-color: #f2f2f2;}
+*/
 .barre_top{
   display: flex;
   justify-content: space-between;
@@ -47,6 +47,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 .visualisateur {
   border-left: grey 1px solid;
 }
+
 
 .bouton-newmail {
   float: right;
